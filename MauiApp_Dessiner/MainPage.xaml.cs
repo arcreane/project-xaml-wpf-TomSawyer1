@@ -20,5 +20,12 @@ public partial class MainPage : ContentPage
 
 		SemanticScreenReader.Announce(CounterBtn.Text);
 	}
+	//new fonction de test
+	private void thomasclique(object sender, EventArgs e)
+	{
+		// si cliqué 
+		btnthomas.Text = $"le bouton thomas est cliqué ";
+		SemanticScreenReader.Announce(btnthomas.Text);
+	}
 }
 

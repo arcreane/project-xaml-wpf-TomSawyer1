@@ -1,31 +1,68 @@
-﻿namespace MauiApp_Dessiner;
+﻿using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using System.Collections.Generic;
 
-public partial class MainPage : ContentPage
+namespace MauiApp_Dessiner
 {
-	int count = 0;
+    public partial class MainPage : ContentPage
+    {
+        private List<PointF> points = new List<PointF>();
 
-	public MainPage()
-	{
-		InitializeComponent();
-	}
+        public MainPage()
+        {
+            InitializeComponent();
+            drawingView.Drawable = new CustomDrawable(points);
+        }
 
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
-		count++;
+        private void OnClearClicked(object sender, EventArgs e)
+        {
+            points.Clear();
+            drawingView.Invalidate();
+        }
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
+        private void OnStartInteraction(object sender, TouchEventArgs e)
+        {
+            HandleTouch(e);
+        }
 
-		SemanticScreenReader.Announce(CounterBtn.Text);
-	}
-	//new fonction de test
-	private void thomasclique(object sender, EventArgs e)
-	{
-		// si cliqué 
-		btnthomas.Text = $"le bouton thomas est cliqué ";
-		SemanticScreenReader.Announce(btnthomas.Text);
-	}
+        private void OnDragInteraction(object sender, TouchEventArgs e)
+        {
+            HandleTouch(e);
+        }
+
+        private void OnEndInteraction(object sender, TouchEventArgs e)
+        {
+            HandleTouch(e);
+        }
+
+        private void HandleTouch(TouchEventArgs e)
+        {
+            foreach (var touch in e.Touches)
+            {
+                points.Add(new PointF((float)touch.X, (float)touch.Y));
+            }
+            drawingView.Invalidate();
+        }
+    }
+
+    public class CustomDrawable : IDrawable
+    {
+        private readonly List<PointF> points;
+
+        public CustomDrawable(List<PointF> points)
+        {
+            this.points = points;
+        }
+
+        public void Draw(ICanvas canvas, RectF dirtyRect)
+        {
+            canvas.StrokeColor = Colors.Black;
+            canvas.StrokeSize = 2;
+
+            for (int i = 1; i < points.Count; i++)
+            {
+                canvas.DrawLine(points[i - 1], points[i]);
+            }
+        }
+    }
 }
-

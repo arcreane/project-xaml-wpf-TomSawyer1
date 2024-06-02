@@ -1,9 +1,10 @@
-﻿namespace MauiApp_Dessiner;
-
-public partial class AppShell : Shell
+﻿namespace MauiApp_Dessiner
 {
-	public AppShell()
-	{
-		InitializeComponent();
-	}
+    public partial class AppShell : Shell
+    {
+        public AppShell()
+        {
+            InitializeComponent();
+        }
+    }
 }

@@ -1,11 +1,43 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp_Dessiner.MainPage">
-    <StackLayout>
+    <StackLayout Spacing="20" Padding="20">
         <Button Text="Effacer" Clicked="OnClearClicked"/>
-        <GraphicsView x:Name="drawingView" Drawable="{Binding Drawable}" HeightRequest="500" WidthRequest="500"
-                      StartInteraction="OnStartInteraction"
-                      DragInteraction="OnDragInteraction"
-                      EndInteraction="OnEndInteraction"/>
+        <Button Text="Choisir un mot" Clicked="OnChooseWordClicked"/>
+        <Label x:Name="wordLabel" Text="Mot à dessiner : " FontSize="Large"/>
+        <StackLayout Orientation="Horizontal" Spacing="10">
+            <Button Text="Noir" BackgroundColor="Black" TextColor="White" Clicked="OnColorButtonClicked"/>
+            <Button Text="Rouge" BackgroundColor="Red" Clicked="OnColorButtonClicked"/>
+            <Button Text="Vert" BackgroundColor="Green" Clicked="OnColorButtonClicked"/>
+            <Button Text="Bleu" BackgroundColor="Blue" Clicked="OnColorButtonClicked"/>
+        </StackLayout>
+        <Label Text="Taille du pinceau :"/>
+        <Slider x:Name="brushSizeSlider" Minimum="1" Maximum="20" Value="2"/>
+        <Frame BorderColor="Blue" CornerRadius="0" Padding="0" HasShadow="False">
+            <GraphicsView x:Name="drawingView" HeightRequest="200"
+                          HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                          StartInteraction="OnStartInteraction"
+                          DragInteraction="OnDragInteraction"
+                          EndInteraction="OnEndInteraction"/>
+        </Frame>
+
+         <ListView x:Name="responsesListView"
+              ItemsSource="{Binding Responses}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Padding="10">
+                        <Label Text="{Binding}" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+        <!-- Ajoutez un Entry pour les réponses des joueurs -->
+        <Entry x:Name="responseEntry" Placeholder="Votre réponse" />
+        <!-- Ajoutez un Button pour envoyer la réponse -->
+        <Button Text="Envoyer la réponse" Clicked="OnSendResponseClicked" />
+
+       
     </StackLayout>
 </ContentPage>

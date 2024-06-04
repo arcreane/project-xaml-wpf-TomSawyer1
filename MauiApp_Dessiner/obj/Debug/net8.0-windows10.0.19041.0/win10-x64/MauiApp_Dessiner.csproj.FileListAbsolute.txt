@@ -460,3 +460,12 @@ C:\Users\Thomas\Desktop\Code\Dessine\MauiApp_Dessiner\MauiApp_Dessiner\obj\Debug
 C:\Users\Thomas\Desktop\Code\Dessine\MauiApp_Dessiner\MauiApp_Dessiner\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt
 C:\Users\Thomas\Desktop\Code\Dessine\MauiApp_Dessiner\MauiApp_Dessiner\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\Thomas\Desktop\Code\Dessine\MauiApp_Dessiner\MauiApp_Dessiner\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Thomas\Desktop\Code\Dessine\MauiApp_Dessiner\MauiApp_Dessiner\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\Thomas\Desktop\Code\Dessine\MauiApp_Dessiner\MauiApp_Dessiner\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\Users\Thomas\Desktop\Code\Dessine\MauiApp_Dessiner\MauiApp_Dessiner\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Http.Connections.Common.dll
+C:\Users\Thomas\Desktop\Code\Dessine\MauiApp_Dessiner\MauiApp_Dessiner\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.SignalR.Client.dll
+C:\Users\Thomas\Desktop\Code\Dessine\MauiApp_Dessiner\MauiApp_Dessiner\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.SignalR.Client.Core.dll
+C:\Users\Thomas\Desktop\Code\Dessine\MauiApp_Dessiner\MauiApp_Dessiner\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\Thomas\Desktop\Code\Dessine\MauiApp_Dessiner\MauiApp_Dessiner\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+C:\Users\Thomas\Desktop\Code\Dessine\MauiApp_Dessiner\MauiApp_Dessiner\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Features.dll
+C:\Users\Thomas\Desktop\Code\Dessine\MauiApp_Dessiner\MauiApp_Dessiner\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.IO.Pipelines.dll
